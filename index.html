@@ -86,7 +86,7 @@
                       <a id="participante_aicono`+j+`" class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons" id="participante_icono`+participantes[j][0]+`">info</i></a>
                     </div>
                     <div class="card-content">
-                      <p>`+participantes[j][1]+`</p>
+                      <p>(`+participantes[j][0]+`) `+participantes[j][1]+`</p>
                     </div>
                   </div></div>`; 
             }
@@ -105,7 +105,7 @@
             console.log("---->"+eliminado);
             $('#participante_icono'+participantes[eliminado][0]).html('cancel');
             $('#participante_aicono'+participantes[eliminado][0]).removeClass('blue').addClass('red');
-            $('#ul_eliminados').append('<li class="collection-item">'+participantes[eliminado][1]+', participante eliminado</li>');
+            $('#ul_eliminados').append('<li class="collection-item">('+participantes[eliminado][0]+') '+participantes[eliminado][1]+', participante eliminado</li>');
             eliminarparticipante(eliminado);
             console.log(participantes);
 
@@ -116,7 +116,7 @@
                 
                 $('#participante_icono'+participantes[0][0]).html('cake');
                 $('#participante_aicono'+participantes[0][0]).removeClass('blue').addClass('green');
-                $('#ul_eliminados').append('<li class="collection-item">'+participantes[0][1]+', participante ganador!!!</li>');
+                $('#ul_eliminados').append('<li class="collection-item">('+participantes[0][0]+') '+participantes[0][1]+', participante ganador!!!</li>');
                 $('#participante_card'+participantes[0][0]).addClass('green');
             }
             
